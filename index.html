@@ -14,9 +14,9 @@
 <div class="pill">INGLÉS · SEGUNDO TRIMESTRE</div>
 <h1>¡Vamos a practicar, Elizabeth! 🌟</h1>
 <p class="lead">Ahora con dibujos, preguntas para elegir y ejercicios para escribir en inglés, basado en tus apuntes. Elige un tema y responde las preguntas de selección y escritura combinadas y descubre qué debes repasar. Las explicaciones están en español.</p>
-<div class="grid"><div class="mini"><b>7 temas</b><span>Vocabulario y gramática</span></div><div class="mini"><b>Nota /10</b><span>Evaluación automática</span></div><div class="mini"><b>Sin internet</b><span>Abre el archivo en tu navegador</span></div></div>
-<div class="listx"><span class="topic-chip">🌍 Countries & nationalities</span><span class="topic-chip">✅ Verb to be</span><span class="topic-chip">💪 Can / can't</span><span class="topic-chip">🏠 Rooms & objects</span><span class="topic-chip">🔢 Quantifiers</span><span class="topic-chip">📚 There is / are</span><span class="topic-chip">📍 Prepositions</span></div>
-<div class="config"><div class="form-grid"><div><label for="topic">Tema para practicar</label><select id="topic"><option value="all">Simulacro mixto (todos los temas)</option><option value="countries">Países y nacionalidades</option><option value="tobe">Verbo to be</option><option value="can">Can / can't</option><option value="house">La casa y sus objetos</option><option value="quant">Cuantificadores</option><option value="there">There is / there are</option><option value="prep">Preposiciones de lugar</option></select></div><div><label for="count">Cantidad de preguntas</label><select id="count"><option value="10">10 preguntas</option><option value="20">20 preguntas</option><option value="all">Todas las disponibles del tema</option></select></div><div class="mini"><b>Examen mixto automático</b><span>En cada intento aparecerán preguntas para seleccionar y otras para escribir en inglés, con imágenes cuando corresponda.</span></div></div></div>
+<div class="grid"><div class="mini"><b>9 temas</b><span>Vocabulario y gramática</span></div><div class="mini"><b>Nota /10</b><span>Evaluación automática</span></div><div class="mini"><b>Sin internet</b><span>Abre el archivo en tu navegador</span></div></div>
+<div class="listx"><span class="topic-chip">🌍 Countries & nationalities</span><span class="topic-chip">✅ Verb to be</span><span class="topic-chip">💪 Can / can't</span><span class="topic-chip">🏠 Rooms & objects</span><span class="topic-chip">🔢 Quantifiers</span><span class="topic-chip">📚 There is / are</span><span class="topic-chip">📍 Prepositions</span><span class="topic-chip">✍️ Phrases / Frases</span><span class="topic-chip">📝 Have / Has</span></div>
+<div class="config"><div class="form-grid"><div><label for="topic">Tema para practicar</label><select id="topic"><option value="all">Simulacro mixto (todos los temas)</option><option value="countries">Países y nacionalidades</option><option value="tobe">Verbo to be</option><option value="can" selected>Can / can't (tema del examen)</option><option value="house">La casa y sus objetos</option><option value="quant">Cuantificadores</option><option value="there">There is / there are</option><option value="prep">Preposiciones de lugar</option><option value="phrases">Phrases: formar frases</option><option value="have">Have / Has</option></select></div><div><label for="count">Cantidad de preguntas</label><select id="count"><option value="10">10 preguntas</option><option value="20">20 preguntas</option><option value="all">Todas las disponibles del tema</option></select></div><div class="mini"><b>Examen mixto automático</b><span>En cada intento aparecerán preguntas para seleccionar y otras para escribir en inglés, con imágenes cuando corresponda.</span></div></div></div>
 <div class="actions"><button class="btn" id="start">Comenzar simulacro →</button></div>
 <p class="notice">Incluye dibujos originales de habitaciones, muebles y objetos. En preguntas escritas, usa palabras y oraciones completas en inglés. Las respuestas se comprueban automáticamente (no distinguen mayúsculas ni puntuación). Las preguntas se mezclan en cada intento. Una respuesta correcta vale un punto proporcional a la cantidad de preguntas. No se muestran las soluciones hasta terminar.</p>
 <div id="history" class="summary hidden"></div>
@@ -58,9 +58,9 @@ add('can','Complete: “Birds ___ fly.”',['can','cans','are can','can to'],0,'
 add('can','Choose the negative of “She can swim.”',['She not can swim.','She can’t swims.','She can’t swim.','She doesn’t can swim.'],2,'La negación es can’t + verbo base: She can’t swim.');
 add('can','Choose the correct question:',['Can you play the piano?','Do you can play the piano?','Can you to play the piano?','You can play the piano?'],0,'La pregunta usa Can + sujeto + verbo base.');
 add('can','Answer: “Can he run fast?” (Yes)',['Yes, he does.','Yes, he is.','Yes, he can.','Yes, he cans.'],2,'La respuesta corta es Yes, he can.');
-add('can','Complete: “The children can ___ English.”',['speaks','speaking','to speak','speak'],3,'Después de can usamos el verbo base sin to: speak.');
+add('can','Complete: “She ___ speak English.”',['can','cans','is can','can to'],0,'Para habilidad afirmativa usamos can + verbo base: She can speak English.');
 add('can','Answer: “Can they fly?” (No)',['No, they can’t.','No, they aren’t.','No, they doesn’t.','No, they not can.'],0,'La respuesta corta negativa es No, they can’t.');
-add('can','Which sentence is grammatically correct?',['My sister can dances.','My sister can dance.','My sister cans dance.','My sister can to dance.'],1,'Can no cambia con he/she/it y el verbo siguiente va en forma base.');
+add('can','Complete: “My sister ___ dance.”',['cans','can to','can','is can'],2,'Can es igual con I, you, he, she, it, we y they.');
 // rooms & objects
 add('house','Where do you usually sleep?',['Kitchen','Bathroom','Bedroom','Dining room'],2,'Bedroom = dormitorio, lugar donde suele estar la cama.','🛏️');
 add('house','Which room is used for preparing food?',['Laundry room','Kitchen','Bedroom','Living room'],1,'Kitchen = cocina.','🍳');
@@ -113,6 +113,16 @@ write('can','Complete: A bird ___ fly.',['can'],'Can expresa una capacidad.');
 write('can','Complete: Fish ___ walk.',['cannot',"can't",'can not'],'Para expresar que no pueden caminar se usa cannot / can’t.');
 write('can','Write the short answer: Can you swim? (yes)',['yes i can'],'La forma afirmativa breve es Yes, I can.');
 write('can','Order the words: can / she / dance / ?',['can she dance'],'En preguntas, can va antes del sujeto.');
+write('can','Complete (habilidad): The tiger ___ run fast.',['can'],'Se usa can para expresar una habilidad, antes del verbo en forma base.','🐯');
+write('can','Complete (incapacidad): The children ___ fly.',['cannot',"can't",'can not'],'La forma negativa es cannot o can’t, seguida del verbo base.','🧒');
+write('can','Complete the question: ___ your sister sing?',['can'],'Las preguntas empiezan con Can + sujeto + verbo base.');
+write('can','Complete the answer: Yes, she ___.',['can'],'La respuesta corta afirmativa termina con can.');
+write('can','Complete the answer: No, he ___.',["can't",'cannot','can not'],'La respuesta corta negativa termina con can’t o cannot.');
+write('can','Write a full negative sentence: I / swim',['i cannot swim',"i can't swim",'i can not swim'],'La negación usa sujeto + can’t + verbo base.');
+write('can','Write a full question: they / play soccer',['can they play soccer'],'La interrogativa usa Can + sujeto + verbo base.');
+write('can','Complete: An elephant ___ fly.',['cannot',"can't",'can not'],'Para expresar imposibilidad usamos cannot/can’t.','🐘');
+write('can','Complete: We ___ learn English.',['can'],'Para expresar que somos capaces de aprender usamos can.');
+write('can','Complete: ___ a fish swim?',['can'],'La pregunta sobre capacidad comienza por Can.','🐟');
 write('house','Translate into English: cocina',['kitchen'],'Kitchen significa cocina.','kitchen');
 write('house','Translate into English: dormitorio',['bedroom'],'Bedroom significa dormitorio.','bedroom');
 write('house','Translate into English: refrigeradora',['refrigerator','fridge'],'Refrigerator y fridge son formas válidas.','kitchen');
@@ -127,8 +137,33 @@ write('prep','Look at the picture. Complete: The ball is ___ the table.',['under
 write('prep','Look at the picture. Complete: The lamp is ___ the sofa.',['next to','beside'],'Next to indica junto a.','living');
 write('prep','Translate into English: detrás de',['behind'],'Behind significa detrás de.');
 write('prep','Complete: The book is ___ the table. (encima de)',['on'],'On indica sobre una superficie.');
+// Nuevos ejercicios: frases (phrases) y el verbo have/has.
+add('have','Choose the correct sentence:',['She have a dog.','She has a dog.','She haves a dog.','She having a dog.'],1,'Con she/he/it usamos has en afirmaciones.');
+add('have','Complete: We ___ English lessons.',['has','have','having','haves'],1,'Con we se usa have.');
+add('have','Choose the correct negative:',['He doesn’t have a car.','He doesn’t has a car.','He don’t have a car.','He not has a car.'],0,'Después de doesn’t se usa have, nunca has.');
+add('have','Choose the correct question:',['Does she has a cat?','Do she have a cat?','Does she have a cat?','Has she have a cat?'],2,'La estructura es Does + she + have + complemento.');
+write('have','Complete: My brother ___ a bike.',['has'],'Con he, she, it, o una persona singular, usamos has.');
+write('have','Complete: They ___ two books.',['have'],'Con they usamos have.');
+write('have','Complete: She doesn’t ___ a computer.',['have'],'Después de doesn’t el verbo vuelve a su forma base: have.');
+write('have','Write the short answer: Does he have a pencil? (yes)',['yes he does'],'Las respuestas cortas con does usan Yes, he does.');
+write('have','Write the question: she / have / a cat',['does she have a cat'],'En preguntas con she se usa Does + sujeto + have.');
+write('phrases','Order the words into a sentence: can / my / sister / sing',['my sister can sing'],'Orden: sujeto + can + verbo base.');
+write('phrases','Order: there / two / are / chairs / .',['there are two chairs'],'There are se usa para cantidades plurales.');
+write('phrases','Order: is / the / under / ball / table / the',['the ball is under the table'],'Sujeto + is + preposición de lugar + objeto.');
+write('phrases','Order: from / I / Ecuador / am',['i am from ecuador'],'I + am + from + país.');
+write('phrases','Write a negative sentence: She / can / fly',['she cannot fly',"she can't fly",'she can not fly'],'Sujeto + cannot/can’t + verbo base.');
+write('phrases','Write a question: your brother / can / swim',['can your brother swim'],'Can + sujeto + verbo base es una pregunta sobre habilidad.');
+write('phrases','Order: a / is / kitchen / there / table / in / the',['there is a table in the kitchen'],'There is + a + objeto singular + in the + habitación.');
+write('phrases','Order: they / English / have / lessons',['they have english lessons'],'Con they se usa have en presente simple.');
+add('phrases','Which phrase is a correct question?',['She can dance?','Can she dance?','Does she can dance?','Can dances she?'],1,'Can se coloca al principio de una pregunta sobre capacidad.');
+add('phrases','Which sentence is written correctly?',['There are a chair.','There is two chairs.','There are two chairs.','There is many chairs.'],2,'There are + sustantivo plural.');
+// Correcciones visuales: no revelar el significado ni respuesta en el enunciado.
+write('prep','Look at the picture. Complete: The ball is ___ the table.',['under','beneath'],'Under significa debajo de.','ball');
+write('prep','Look at the picture. Complete: The lamp is ___ the sofa.',['next to','beside'],'Next to significa al lado de.','living');
+write('prep','Look at the picture. Complete: The chair is ___ the sofa.',['behind'],'Behind significa detrás de.','chairbehind');
 // Ilustraciones SVG vectoriales locales sin necesidad de conexión ni imágenes externas.
 const scenes={
+  chairbehind:`<svg viewBox="0 0 440 245" role="img" aria-label="Una silla parcialmente detrás del sofá"><rect width="440" height="245" rx="18" fill="#e9f3ff"/><rect y="210" width="440" height="35" fill="#f2dfc5"/><rect x="275" y="82" width="65" height="11" rx="5" fill="#9b744f"/><rect x="283" y="93" width="11" height="100" fill="#9b744f"/><rect x="326" y="93" width="10" height="100" fill="#9b744f"/><rect x="280" y="135" width="63" height="13" rx="5" fill="#a47d58"/><rect x="105" y="142" width="205" height="67" rx="15" fill="#547bb7"/><rect x="123" y="108" width="162" height="78" rx="16" fill="#85a5d7"/><rect x="105" y="168" width="34" height="41" rx="9" fill="#3f669d"/><rect x="280" y="168" width="30" height="41" rx="9" fill="#3f669d"/></svg>`,
   ball:`<svg viewBox="0 0 440 245" role="img" aria-label="Una pelota debajo de una mesa"><rect width="440" height="245" rx="18" fill="#eaf4ff"/><rect y="203" width="440" height="42" fill="#f1dfc4"/><rect x="106" y="91" width="228" height="19" rx="5" fill="#9f6b43"/><rect x="125" y="110" width="14" height="95" fill="#a77552"/><rect x="301" y="110" width="14" height="95" fill="#a77552"/><circle cx="219" cy="172" r="31" fill="#ed9344" stroke="#934b29" stroke-width="3"/><path d="M190 162 Q220 178 247 159 M211 144 Q225 172 221 202" fill="none" stroke="#fff1d9" stroke-width="5"/></svg>`,
   living:`<svg viewBox="0 0 440 245" role="img" aria-label="Una lámpara al lado de un sofá en la sala"><rect width="440" height="245" rx="18" fill="#e8f3ff"/><rect y="206" width="440" height="39" fill="#eee0c7"/><rect x="105" y="133" width="210" height="68" rx="20" fill="#547cbb"/><rect x="125" y="100" width="172" height="74" rx="16" fill="#7699cf"/><rect x="104" y="155" width="28" height="48" rx="10" fill="#416ca9"/><rect x="287" y="155" width="28" height="48" rx="10" fill="#416ca9"/><path d="M357 118 L357 204" stroke="#6b5275" stroke-width="7"/><path d="M328 119 L388 119 L376 77 L340 77 Z" fill="#f0c56c" stroke="#8c694b" stroke-width="3"/><circle cx="357" cy="76" r="5" fill="#faefb2"/></svg>`,
   kitchen:`<svg viewBox="0 0 440 245" role="img" aria-label="Cocina con refrigerador, estufa y fregadero"><rect width="440" height="245" rx="18" fill="#f0f7ff"/><rect y="211" width="440" height="34" fill="#d9d6cd"/><rect x="45" y="52" width="115" height="155" rx="8" fill="#d7e1ec" stroke="#8195b1" stroke-width="3"/><path d="M45 125 H160" stroke="#8195b1" stroke-width="3"/><rect x="147" y="78" width="18" height="31" rx="5" fill="#9baec5"/><rect x="173" y="131" width="210" height="74" rx="5" fill="#c2d4c3"/><rect x="169" y="121" width="220" height="15" rx="4" fill="#9bafbf"/><rect x="199" y="145" width="75" height="55" rx="5" fill="#899caf"/><circle cx="236" cy="171" r="15" fill="#dfe7eb"/><path d="M311 130 V96 Q311 81 331 86 V118" fill="none" stroke="#708a9a" stroke-width="7"/><ellipse cx="332" cy="129" rx="36" ry="7" fill="#e3f3fa"/></svg>`,
@@ -139,7 +174,7 @@ add('house','What room is shown in the picture?',['Bathroom','Kitchen','Bedroom'
 add('house','What room is shown in the picture?',['Bedroom','Kitchen','Bathroom','Laundry room'],0,'Bedroom significa dormitorio.','');Q[Q.length-1].scene='bedroom';
 add('prep','Where is the ball?',['On the table','Under the table','Behind the door','In the closet'],1,'La pelota está under the table: debajo de la mesa.','');Q[Q.length-1].scene='ball';
 add('prep','Where is the lamp?',['Between the chairs','Under the sofa','Next to the sofa','In the sofa'],2,'La lámpara está next to the sofa: junto al sofá.','');Q[Q.length-1].scene='living';
-const labels={countries:'Países y nacionalidades',tobe:'Verbo to be',can:'Can / can’t',house:'Rooms & objects',quant:'Cuantificadores',there:'There is / there are',prep:'Preposiciones de lugar'};
+const labels={countries:'Países y nacionalidades',tobe:'Verbo to be',can:'Can / can’t',house:'Rooms & objects',quant:'Cuantificadores',there:'There is / there are',prep:'Preposiciones de lugar',phrases:'Formar frases (phrases)',have:'Have / Has'};
 let paper=[],answers=[],idx=0,seed=0;const $=x=>document.getElementById(x);const shuffle=a=>{let out=[...a];for(let i=out.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[out[i],out[j]]=[out[j],out[i]]}return out};
 function selectQuestions(topic,n){
  let pool=shuffle(Q.filter(q=>topic==='all'||q.topic===topic));
