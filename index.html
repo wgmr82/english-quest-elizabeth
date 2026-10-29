@@ -13,12 +13,12 @@
 <section id="home" class="card">
 <div class="pill">INGLÉS · SEGUNDO TRIMESTRE</div>
 <h1>¡Vamos a practicar, Elizabeth! 🌟</h1>
-<p class="lead">Ahora con dibujos, preguntas para elegir y ejercicios para escribir en inglés, basado en tus apuntes. Elige un tema y responde las preguntas de selección y escritura combinadas y descubre qué debes repasar. Las explicaciones están en español.</p>
-<div class="grid"><div class="mini"><b>9 temas</b><span>Vocabulario y gramática</span></div><div class="mini"><b>Nota /10</b><span>Evaluación automática</span></div><div class="mini"><b>Sin internet</b><span>Abre el archivo en tu navegador</span></div></div>
+<p class="lead">100 preguntas por simulacro, con prioridad en gramática inglesa, imágenes y ejercicios para seleccionar o escribir, basados en tus apuntes. Elige un tema y responde las preguntas de selección y escritura combinadas y descubre qué debes repasar. Las explicaciones están en español.</p>
+<div class="grid"><div class="mini"><b>9 temas</b><span>Prioridad: gramática</span></div><div class="mini"><b>Nota /10</b><span>Evaluación automática</span></div><div class="mini"><b>Sin internet</b><span>Abre el archivo en tu navegador</span></div></div>
 <div class="listx"><span class="topic-chip">🌍 Countries & nationalities</span><span class="topic-chip">✅ Verb to be</span><span class="topic-chip">💪 Can / can't</span><span class="topic-chip">🏠 Rooms & objects</span><span class="topic-chip">🔢 Quantifiers</span><span class="topic-chip">📚 There is / are</span><span class="topic-chip">📍 Prepositions</span><span class="topic-chip">✍️ Phrases / Frases</span><span class="topic-chip">📝 Have / Has</span></div>
-<div class="config"><div class="form-grid"><div><label for="topic">Tema para practicar</label><select id="topic"><option value="all">Simulacro mixto (todos los temas)</option><option value="countries">Países y nacionalidades</option><option value="tobe">Verbo to be</option><option value="can" selected>Can / can't (tema del examen)</option><option value="house">La casa y sus objetos</option><option value="quant">Cuantificadores</option><option value="there">There is / there are</option><option value="prep">Preposiciones de lugar</option><option value="phrases">Phrases: formar frases</option><option value="have">Have / Has</option></select></div><div><label for="count">Cantidad de preguntas</label><select id="count"><option value="10">10 preguntas</option><option value="20">20 preguntas</option><option value="all">Todas las disponibles del tema</option></select></div><div class="mini"><b>Examen mixto automático</b><span>En cada intento aparecerán preguntas para seleccionar y otras para escribir en inglés, con imágenes cuando corresponda.</span></div></div></div>
+<div class="config"><div class="form-grid"><div><label for="topic">Tema para practicar</label><select id="topic"><option value="all" selected>Simulacro mixto (todos los temas)</option><option value="countries">Países y nacionalidades</option><option value="tobe">Verbo to be</option><option value="can">Can / can't</option><option value="house">La casa y sus objetos</option><option value="quant">Cuantificadores</option><option value="there">There is / there are</option><option value="prep">Preposiciones de lugar</option><option value="phrases">Phrases: formar frases</option><option value="have">Have / Has</option></select></div><div><label for="count">Cantidad de preguntas</label><select id="count"><option value="10">10 preguntas</option><option value="20">20 preguntas</option><option value="100" selected>100 preguntas</option><option value="all">Todas las disponibles del tema</option></select></div><div class="mini"><b>Examen mixto automático</b><span>El simulacro general incluye todos los temas del cuaderno, con preguntas para seleccionar y escribir, e imágenes cuando corresponda.</span></div></div></div>
 <div class="actions"><button class="btn" id="start">Comenzar simulacro →</button></div>
-<p class="notice">Incluye dibujos originales de habitaciones, muebles y objetos. En preguntas escritas, usa palabras y oraciones completas en inglés. Las respuestas se comprueban automáticamente (no distinguen mayúsculas ni puntuación). Las preguntas se mezclan en cada intento. Una respuesta correcta vale un punto proporcional a la cantidad de preguntas. No se muestran las soluciones hasta terminar.</p>
+<p class="notice">Incluye dibujos originales de habitaciones, muebles y objetos. En preguntas escritas, usa palabras y oraciones completas en inglés. La corrección no distingue mayúsculas o minúsculas, espacios extra ni puntuación final, pero exige el verbo, la conjugación, el orden y las palabras gramaticalmente correctas. Las contracciones equivalentes también se aceptan. Las preguntas se mezclan y se priorizan las nunca vistas en este navegador. Cuando se agote el banco, algunas tendrán que repetirse. Una respuesta correcta vale un punto proporcional a la cantidad de preguntas. No se muestran las soluciones hasta terminar.</p>
 <div id="history" class="summary hidden"></div>
 </section>
 <section id="play" class="card hidden" aria-live="polite"><div class="topline"><span id="counter"></span><span id="topicname"></span></div><div class="bar"><div class="fill" id="progress"></div></div><div id="question"></div><div id="options"></div><div class="actions"><button class="btn secondary" id="prev">← Anterior</button><button class="btn" id="next">Siguiente →</button><button class="btn hidden" id="finish">Calificar examen ✓</button></div><p class="tiny muted" id="pending"></p></section>
@@ -162,6 +162,30 @@ write('prep','Look at the picture. Complete: The ball is ___ the table.',['under
 write('prep','Look at the picture. Complete: The lamp is ___ the sofa.',['next to','beside'],'Next to significa al lado de.','living');
 write('prep','Look at the picture. Complete: The chair is ___ the sofa.',['behind'],'Behind significa detrás de.','chairbehind');
 // Ilustraciones SVG vectoriales locales sin necesidad de conexión ni imágenes externas.
+
+// Prácticas nuevas tomadas de los temas y ejemplos del cuaderno.
+write('tobe','Complete: They ___ from Australia.',['are'], 'Con they se usa are.');
+write('tobe','Write the negative short answer: Is she a teacher? (No)',["no she isn't","no she is not"],'Con she: No, she isn’t.');
+write('countries','Complete the nationality: A person from France is ___.',['french'],'France → French.');
+write('countries','Complete: A person from Ecuador is ___.',['ecuadorian'],'Ecuador → Ecuadorian.','🇪🇨');
+write('have','Complete: She ___ long hair.',['has'],'Con she usamos has en afirmativa.');
+write('have','Complete: We ___ English lessons.',['have'],'Con we se utiliza have.');
+write('have','Complete: She doesn\'t ___ a bicycle.',['have'],'Después de doesn’t se usa la forma base have.');
+write('there','Complete: There ___ a scarf on the floor.',['is'],'Con a scarf, singular, corresponde is.');
+write('there','Complete: There ___ four pictures on the wall.',['are'],'Four pictures es plural y corresponde are.');
+write('there','Write the negative sentence: There are books on the table.',["there aren't any books on the table","there are not any books on the table"],'En negativo plural se usa there aren’t any.');
+write('quant','Complete: There are ___ papers on the floor. (algunos)',['some'],'Some se utiliza comúnmente en afirmaciones plurales.');
+write('quant','Complete: There aren\'t ___ magnets on the fridge.',['any'],'Any se usa habitualmente en oraciones negativas.');
+write('house','What is «lavandería» in English?',['laundry room'],'Laundry room significa lavandería.');
+write('house','What is «comedor» in English?',['dining room'],'Dining room significa comedor.');
+write('prep','Complete: The shoes are ___ the bed. (debajo)',['under'],'Under significa debajo de.');
+write('prep','Complete: The sink is ___ the shower and the toilet. (entre)',['between'],'Between significa entre dos elementos.');
+write('phrases','Order the words: is / the / cat / sofa / on / the',['the cat is on the sofa'],'Sujeto + is + preposición de lugar + objeto.');
+write('phrases','Order the words: there / are / two / books / on / floor / the',['there are two books on the floor'],'There are + cantidad + sustantivo plural + lugar.');
+write('phrases','Order the words: can / you / play / the / piano',['can you play the piano'],'Can + sujeto + verbo base + complemento.');
+write('can','Complete: The children ___ fly. (no pueden)',["can't","cannot"],'Can’t o cannot indica incapacidad.');
+write('can','Write the short answer: Can the tiger run fast? (Yes)',['yes it can'],'Para the tiger usamos it: Yes, it can.');
+
 const scenes={
   chairbehind:`<svg viewBox="0 0 440 245" role="img" aria-label="Una silla parcialmente detrás del sofá"><rect width="440" height="245" rx="18" fill="#e9f3ff"/><rect y="210" width="440" height="35" fill="#f2dfc5"/><rect x="275" y="82" width="65" height="11" rx="5" fill="#9b744f"/><rect x="283" y="93" width="11" height="100" fill="#9b744f"/><rect x="326" y="93" width="10" height="100" fill="#9b744f"/><rect x="280" y="135" width="63" height="13" rx="5" fill="#a47d58"/><rect x="105" y="142" width="205" height="67" rx="15" fill="#547bb7"/><rect x="123" y="108" width="162" height="78" rx="16" fill="#85a5d7"/><rect x="105" y="168" width="34" height="41" rx="9" fill="#3f669d"/><rect x="280" y="168" width="30" height="41" rx="9" fill="#3f669d"/></svg>`,
   ball:`<svg viewBox="0 0 440 245" role="img" aria-label="Una pelota debajo de una mesa"><rect width="440" height="245" rx="18" fill="#eaf4ff"/><rect y="203" width="440" height="42" fill="#f1dfc4"/><rect x="106" y="91" width="228" height="19" rx="5" fill="#9f6b43"/><rect x="125" y="110" width="14" height="95" fill="#a77552"/><rect x="301" y="110" width="14" height="95" fill="#a77552"/><circle cx="219" cy="172" r="31" fill="#ed9344" stroke="#934b29" stroke-width="3"/><path d="M190 162 Q220 178 247 159 M211 144 Q225 172 221 202" fill="none" stroke="#fff1d9" stroke-width="5"/></svg>`,
@@ -174,28 +198,116 @@ add('house','What room is shown in the picture?',['Bathroom','Kitchen','Bedroom'
 add('house','What room is shown in the picture?',['Bedroom','Kitchen','Bathroom','Laundry room'],0,'Bedroom significa dormitorio.','');Q[Q.length-1].scene='bedroom';
 add('prep','Where is the ball?',['On the table','Under the table','Behind the door','In the closet'],1,'La pelota está under the table: debajo de la mesa.','');Q[Q.length-1].scene='ball';
 add('prep','Where is the lamp?',['Between the chairs','Under the sofa','Next to the sofa','In the sofa'],2,'La lámpara está next to the sofa: junto al sofá.','');Q[Q.length-1].scene='living';
+
+// Banco ampliado: preguntas únicas adicionales sobre los nueve temas.
+const countryPairs=[['Australia','Australian'],['Brazil','Brazilian'],['China','Chinese'],['Egypt','Egyptian'],['India','Indian'],['Peru','Peruvian'],['the United Kingdom','British'],['the United States','American'],['Japan','Japanese'],['Greece','Greek'],['France','French'],['Italy','Italian'],['Thailand','Thai'],['Turkey','Turkish'],['Ecuador','Ecuadorian']];
+for(const [country,nationality] of countryPairs){
+ write('countries',`Write the nationality: My friend is from ${country}. My friend is ___.`,[nationality],`${country} corresponde a ${nationality}.`);
+ write('countries',`Complete with a country: A person who is ${nationality} is from ___.`,[country, country.replace(/^the /,'')],`País: ${country}; nacionalidad: ${nationality}.`);
+}
+const people=[['I','am','am not'],['You','are','aren’t'],['He','is','isn’t'],['She','is','isn’t'],['It','is','isn’t'],['We','are','aren’t'],['They','are','aren’t']];
+const roles=['happy today','at home now','ready for school','in the classroom','from Ecuador','very tired'];
+for(const [who,be,neg] of people){
+ for(const role of roles){
+  write('tobe',`Complete with am, is or are: ${who} ___ ${role}.`,[be],`El pronombre ${who} utiliza ${be}.`);
+ }
+ write('tobe',`Make negative; write only the missing words: ${who} ___ at school.`,[neg,be+' not'],`Para negar ${who} usamos ${be} not.`);
+}
+const capabilities=[['A bird','fly'],['A fish','swim'],['A singer','sing'],['A dancer','dance'],['A chef','cook'],['A student','read'],['A tiger','run'],['A child','jump'],['A pianist','play the piano'],['A dog','run'],['A cat','climb'],['A teacher','write']];
+for(const [who,verb] of capabilities){
+ write('can',`Complete with the modal verb for ability: ${who} ___ ${verb}.`,['can'],`Can expresa habilidad y va seguido del verbo base: ${verb}.`);
+ write('can',`Complete the negative with one word: ${who} ___ not ${verb}.`,['can'],`La forma completa es cannot o can not, y la contraída can't.`);
+ write('can',`Write the first word of this question: ___ ${who.toLowerCase()} ${verb}?`,['can'],`Una pregunta con can comienza con Can, seguida del sujeto y verbo base.`);
+}
+const possessions=[['I','have'],['You','have'],['He','has'],['She','has'],['We','have'],['They','have']];
+const things=['a notebook','a blue pen','two pencils','a new backpack','a small dictionary','an English book'];
+for(const [who,verb] of possessions){
+ for(const item of things){write('have',`Complete with have or has: ${who} ___ ${item}.`,[verb],`${who} se combina con ${verb} en afirmaciones del presente simple.`)}
+}
+const inventory=[['a sofa','is'],['a desk','is'],['a lamp','is'],['a refrigerator','is'],['a window','is'],['two chairs','are'],['three pictures','are'],['many books','are'],['some bottles','are'],['four tables','are']];
+for(const [item,verb] of inventory){
+ write('there',`Complete with is or are: There ___ ${item} in the house.`,[verb],`There ${verb} se usa con ${item}.`);
+ write('there',`Complete with There is or There are: ___ ${item} in the living room.`,[`there ${verb}`],`La estructura correcta es there ${verb} para ${item}.`);
+ write('there',`Complete the question with Is or Are: ___ there ${item} in the room?`,[verb],`En las preguntas el verbo ${verb} va antes de there.`);
+}
+const household=[['kitchen','cook'],['bedroom','sleep'],['bathroom','take a shower'],['living room','watch television'],['dining room','eat dinner'],['laundry room','wash clothes']];
+for(const [room,activity] of household){
+ write('house',`Write the room in English: Where do you usually ${activity}? In the ___.`,[room],`Para ${activity} se utiliza habitualmente ${room}.`);
+ write('house',`Complete the phrase with the room: The ${room==='kitchen'?'stove':room==='bedroom'?'bed':room==='bathroom'?'shower':room==='living room'?'sofa':room==='dining room'?'dining table':'washing machine'} is in the ___.`,[room],`La habitación correspondiente es ${room}.`);
+}
+const objects=[['stove','estufa'],['fridge','refrigerador'],['sink','fregadero'],['bed','cama'],['sofa','sofá'],['chair','silla'],['table','mesa'],['washer','lavadora'],['dryer','secadora'],['shower','ducha'],['toilet','inodoro'],['closet','armario'],['lamp','lámpara'],['clock','reloj']];
+for(const [en,es] of objects){write('house',`Write the word in English: ${es}.`,[en,...(en==='fridge'?['refrigerator']:en==='washer'?['washing machine']:[])],`En inglés, ${es} se dice ${en}.`)}
+const prepositions=[['on','encima de'],['under','debajo de'],['behind','detrás de'],['between','entre dos objetos'],['next to','junto a'],['in front of','delante de'],['in','dentro de']];
+const precontexts=[['the chair','the sofa'],['the book','the desk'],['the lamp','the table'],['the ball','the bed']];
+for(const [en,es] of prepositions){
+ for(const [obj,ref] of precontexts){write('prep',`Complete with a preposition: ${obj[0].toUpperCase()+obj.slice(1)} is ___ ${ref}. (${es})`,[en],`La expresión «${es}» se traduce como ${en}.`)}
+}
+const someAny=[['There are ___ books on the shelf.','some'],['There aren’t ___ books on the shelf.','any'],['Are there ___ apples on the table?','any'],['There is ___ apple in the kitchen.','an'],['There is ___ chair in the room.','a'],['There are ___ students in the classroom.','many'],['There are ___ pictures on the wall.','some'],['There isn’t ___ milk in the fridge.','any'],['Is there ___ orange on the table?','an'],['There is ___ banana on the table.','a']];
+for(const [sentence,answer] of someAny){write('quant',`Complete: ${sentence}`,[answer],`Aquí corresponde ${answer} según el número, la oración y si es afirmativa, negativa o interrogativa.`)}
+const phraseParts=[
+ ['she / can / dance','She can dance'],['he / cannot / swim','He cannot swim'],['can / they / sing','Can they sing'],['I / am / Ecuadorian','I am Ecuadorian'],['we / are / students','We are students'],['he / is / a teacher','He is a teacher'],['she / has / a book','She has a book'],['they / have / a car','They have a car'],['there / is / a table','There is a table'],['there / are / two chairs','There are two chairs'],['the / cat / is / under / the / bed','The cat is under the bed'],['the / picture / is / on / the / wall','The picture is on the wall'],['the / lamp / is / next to / the / sofa','The lamp is next to the sofa'],['I / can / read / English','I can read English'],['can / your / sister / sing','Can your sister sing'],['she / does not / have / a bike','She does not have a bike'],['is / there / a / dog','Is there a dog'],['are / there / any / books','Are there any books'],['the / ball / is / behind / the / door','The ball is behind the door'],['the / kitchen / has / a / stove','The kitchen has a stove']
+];
+for(const [parts,whole] of phraseParts){write('phrases',`Order these words to make a correct sentence: ${parts}`,[whole,whole.replace('cannot',"can't").replace('does not',"doesn't")],`El orden correcto es: ${whole}.`)}
+
 const labels={countries:'Países y nacionalidades',tobe:'Verbo to be',can:'Can / can’t',house:'Rooms & objects',quant:'Cuantificadores',there:'There is / there are',prep:'Preposiciones de lugar',phrases:'Formar frases (phrases)',have:'Have / Has'};
 let paper=[],answers=[],idx=0,seed=0;const $=x=>document.getElementById(x);const shuffle=a=>{let out=[...a];for(let i=out.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[out[i],out[j]]=[out[j],out[i]]}return out};
+// Se guardan los identificadores de las últimas tres prácticas en este navegador.
+// Priorizamos preguntas NO utilizadas; solo repetimos cuando el banco es insuficiente.
+const recentKey='englishQuestHistoryV4';
+function historyData(){try{return JSON.parse(localStorage.getItem(recentKey)||'{"counts":{},"last":{}}')}catch(e){return {counts:{},last:{}}}}
+function rememberPaper(items){try{let h=historyData();h.counts=h.counts||{};h.last=h.last||{};h.turn=(h.turn||0)+1;for(const q of items){let id=String(Q.indexOf(q));h.counts[id]=(h.counts[id]||0)+1;h.last[id]=h.turn}localStorage.setItem(recentKey,JSON.stringify(h))}catch(e){}}
+function recentAware(pool){const h=historyData();const counts=h.counts||{},last=h.last||{};const random=new Map(pool.map(q=>[q,Math.random()]));return [...pool].sort((a,b)=>(counts[Q.indexOf(a)]||0)-(counts[Q.indexOf(b)]||0)||(last[Q.indexOf(a)]||0)-(last[Q.indexOf(b)]||0)||random.get(a)-random.get(b))}
 function selectQuestions(topic,n){
- let pool=shuffle(Q.filter(q=>topic==='all'||q.topic===topic));
+ const pool=recentAware(Q.filter(q=>topic==='all'||q.topic===topic));
  if(n==='all')return shuffle(pool);
  const count=Math.min(Number(n),pool.length);
- const written=shuffle(pool.filter(q=>q.kind==='write'));
- const chosen=shuffle(pool.filter(q=>q.kind!=='write'));
- const desiredWrite=Math.min(written.length,Math.max(1,Math.round(count*0.4)));
- let result=written.splice(0,desiredWrite);
- // Complete con selección antes de rellenar con otras preguntas escritas.
- while(result.length<count&&chosen.length)result.push(chosen.pop());
- while(result.length<count&&written.length)result.push(written.pop());
- // En exámenes de 10 o más, asegurar que aparezcan ambos tipos si existen.
- return shuffle(result);
+ if(topic!=='all')return combineKinds(pool,count);
+ // Objetivo para un simulacro de 100: 91 ejercicios gramaticales y 9 de vocabulario.
+ // Cada tema mantiene presencia; las cuotas se adaptan a simulacros más cortos.
+ const weights={tobe:15,can:17,have:14,there:15,quant:11,prep:9,phrases:10,countries:5,house:4};
+ const topics=Object.keys(weights);
+ const allocations=Object.fromEntries(topics.map(t=>[t,0]));
+ let remaining=count;
+ if(count>=topics.length){for(const t of topics){allocations[t]=1;remaining--}}
+ while(remaining>0){
+  const eligible=topics.filter(t=>allocations[t]<pool.filter(q=>q.topic===t).length);
+  if(!eligible.length)break;
+  eligible.sort((a,b)=>(weights[b]*count/100-allocations[b])-(weights[a]*count/100-allocations[a]));
+  allocations[eligible[0]]++;remaining--;
+ }
+ const result=[];
+ for(const t of topics){
+  const subset=pool.filter(q=>q.topic===t);
+  const written=subset.filter(q=>q.kind==='write');
+  const chosen=subset.filter(q=>q.kind!=='write');
+  const desired=allocations[t],writingTarget=Math.round(desired*.55);
+  const picked=[...written.slice(0,writingTarget),...chosen.slice(0,desired-writingTarget)];
+  if(picked.length<desired){
+   for(const q of subset){if(picked.length>=desired)break;if(!picked.includes(q))picked.push(q)}
+  }
+  result.push(...picked);
+ }
+ // Refuerzo: se prioriza gramática y la producción escrita, manteniendo temas del cuaderno.
+ for(const q of pool){if(result.length>=count)break;if(!result.includes(q))result.push(q)}
+ return shuffle(result.slice(0,count));
+}
+function combineKinds(pool,count){
+ const wr=pool.filter(q=>q.kind==='write'), mc=pool.filter(q=>q.kind!=='write');
+ let out=wr.splice(0,Math.min(wr.length,Math.round(count*.45)));
+ while(out.length<count&&mc.length)out.push(mc.shift());
+ while(out.length<count&&wr.length)out.push(wr.shift());
+ return shuffle(out);
 }
 function show(el){['home','play','result'].forEach(id=>$(id).classList.toggle('hidden',id!==el));window.scrollTo({top:0,behavior:'smooth'})}
-function start(){const topic=$('topic').value;paper=selectQuestions(topic,$('count').value);answers=Array(paper.length).fill(null);idx=0;show('play');render()}
+function start(){const topic=$('topic').value;paper=selectQuestions(topic,$('count').value);rememberPaper(paper);answers=Array(paper.length).fill(null);idx=0;show('play');render()}
 function render(){let q=paper[idx];$('counter').textContent=`Pregunta ${idx+1} de ${paper.length}`;$('topicname').textContent=labels[q.topic];$('progress').style.width=`${(idx+1)/paper.length*100}%`;$('question').innerHTML=`${q.scene?`<div class="picture">${scenes[q.scene]}</div>`:q.icon?`<div class="illustration" aria-hidden="true">${q.icon}</div>`:''}<div class="question english">${escapeHTML(q.q)}</div>`;$('options').innerHTML='';if(q.kind==='write'){let help=document.createElement('p');help.className='prompt-hint';help.textContent='Escribe tu respuesta en inglés. Se revisará al terminar.';let input=document.createElement('input');input.className='answer-input';input.type='text';input.autocomplete='off';input.spellcheck=false;input.placeholder='Escribe aquí tu respuesta…';input.setAttribute('aria-label','Respuesta escrita en inglés');input.value=answers[idx]??'';input.oninput=()=>{answers[idx]=input.value;updateNav()};input.onkeydown=e=>{if(e.key==='Enter'&&answers[idx]?.trim()&&idx<paper.length-1){idx++;render()}};$('options').append(help,input);setTimeout(()=>input.focus(),0)}else q.options.forEach((option,j)=>{let b=document.createElement('button');b.type='button';b.className='choice'+(answers[idx]===j?' selected':'');b.setAttribute('aria-pressed',answers[idx]===j?'true':'false');let l=document.createElement('span');l.className='letter';l.textContent='ABCD'[j];let t=document.createElement('span');t.textContent=option;b.append(l,t);b.onclick=()=>{answers[idx]=j;render()};$('options').append(b)});$('prev').disabled=idx===0;$('next').classList.toggle('hidden',idx===paper.length-1);$('finish').classList.toggle('hidden',idx!==paper.length-1);updateNav()}
 function updateNav(){const answered=a=>a!==null&&String(a).trim()!=='';$('next').disabled=!answered(answers[idx]);$('finish').disabled=answers.some(a=>!answered(a));$('pending').textContent=`Respondidas: ${answers.filter(answered).length} de ${paper.length}. Puedes volver a preguntas anteriores.`}
-function normalizeText(v){return String(v??'').toLocaleLowerCase('en').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[’‘]/g,"'").replace(/[.,!?;:]/g,'').replace(/\s+/g,' ').trim()}
-function isRight(q,a){return q.kind==='write'?q.accepted.some(x=>normalizeText(x)===normalizeText(a)):q.correct===a}
+function normalizeText(v){return String(v??'').normalize('NFKC').toLocaleLowerCase('en').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[’‘`´]/g,"'").replace(/[.,!?;:]/g,'').replace(/\s+/g,' ').trim()}
+function equivalentAnswers(a,b){
+ const expand=x=>normalizeText(x).replace(/\b(can't|cannot)\b/g,'can not').replace(/\b(isn't)\b/g,'is not').replace(/\b(aren't)\b/g,'are not').replace(/\b(don't)\b/g,'do not').replace(/\b(doesn't)\b/g,'does not').replace(/\b(i'm)\b/g,'i am').replace(/\b(you're)\b/g,'you are').replace(/\b(we're)\b/g,'we are').replace(/\b(they're)\b/g,'they are').replace(/\b(he's)\b/g,'he is').replace(/\b(she's)\b/g,'she is').replace(/\b(it's)\b/g,'it is').replace(/\b(there's)\b/g,'there is');
+ return expand(a)===expand(b)
+}
+function isRight(q,a){return q.kind==='write'?q.accepted.some(x=>equivalentAnswers(x,a)):q.correct===a}
 function correctText(q){return q.kind==='write'?q.accepted[0]:q.options[q.correct]}
 function answerText(q,a){return q.kind==='write'?a:q.options[a]}
 function escapeHTML(s){return s.replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]))}
